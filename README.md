@@ -1,11 +1,11 @@
-### 此模块为服务器协议接收模块
+### 服务器协议接收
 
-***包模块说明***
+***说明***
 >com.zy.broker
 >>controller
 此模块包含普通的http接口示例
 --------------------------
->>JT808 以JT808协议为例子，启动netty作为服务器接收(这个例子是从别人的github上面移植过来的)
+>>VKGPS 以VK-GPS Tracker协议为例子，启动netty作为服务器接收
 -----------------------------
 >>>codec 编解码相关
 ----------------------------
@@ -21,9 +21,8 @@
 >>>NettyServer
 利用spring注解启动netty
 ---------------------------------------
->>>SessionManager
+>>utils
+>>>DevSessionManager
 管理channel和id对应关系
 --------------------------------------
-这个模块同时启动了一个http端口和一个netty端口，配置在application.properties中
-
-这个模块需要依赖于service-common模块，启动的时候需要先用maven将service-common install在本地仓库中
+同时启动了一个http端口和一个netty端口，配置在application.yml中
